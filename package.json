@@ -1,0 +1,23 @@
+{
+  "name": "skycast-weatherapp",
+  "version": "1.0.0",
+  "description": "A simple weather app by clint360",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clint360/skycast-weatherapp.git"
+  },
+  "keywords": [
+    "Weather",
+    "App"
+  ],
+  "author": "Clint Animbom",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/clint360/skycast-weatherapp/issues"
+  },
+  "homepage": "https://github.com/clint360/skycast-weatherapp#readme"
+}
