@@ -1,0 +1,16 @@
+.imageCircle {
+    font-size: 30px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: inherit;
+    cursor: pointer;
+}
+
+.imageCircle img {
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+}

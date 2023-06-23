@@ -1,0 +1,28 @@
+.iconcircle {
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(rgba(48, 48, 48, 0.367), rgba(0, 0, 0, 0.227)); 
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: all 0.3s;
+    color: inherit;
+    cursor: pointer;
+}
+
+.iconCircleLight {
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(rgba(198, 198, 198, 0.367), rgba(255, 255, 255, 0.227)); 
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: all 0.3s;
+    color: inherit;
+}
+
+.iconcircle:hover {
+    background: radial-gradient(rgba(68, 68, 68, 0.567), rgba(20, 20, 20, 0.527)); 
+}

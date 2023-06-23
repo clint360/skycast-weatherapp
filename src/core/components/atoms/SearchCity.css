@@ -1,0 +1,33 @@
+.searchCity {
+    height: 50px;
+    background: rgba(227, 227, 227, 0.1);
+    width: 90%;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    font-size: 20px;
+}
+
+.searchIcon {
+    width: 10%;
+    font-size: 25px;
+    display: flex;
+    justify-content: end;
+    padding-right: 10px;
+    color: grey;
+}
+
+.searchIt {
+    width: 80%;
+}
+
+.searchIt input {
+    width: 100%;
+    font-size: 20px;
+    background: none;
+    outline: none;
+    border: none;
+    color: inherit;
+}

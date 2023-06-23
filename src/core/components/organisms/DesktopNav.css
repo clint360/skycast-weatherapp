@@ -1,0 +1,75 @@
+.bgcontainer {
+    background-image: url('https://media.istockphoto.com/id/1464242690/vector/star-sky-with-crescent-starry-background-with-moon-seamless-pattern-of-yellow-stars-on-black.jpg?s=612x612&w=0&k=20&c=TaGSDGyMEpWoJ15HgVKAnLHGwODV76yQSnFzauG8veM=');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+
+.desktopnav {
+    width: 100%;
+    height: 80px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+}
+
+.innverdiv {
+    width: 95%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.sec-one {
+   flex-basis: 15%;
+   display: flex;
+   gap: 10px;
+}
+
+.sec-two {
+   width: 15%;
+   font-size: 22px;
+   gap: 5px;
+   align-items: center;
+}
+
+.sec-two .locationname{
+    text-overflow: ellipsis;
+}
+
+.sec-three {
+   width: 45%;
+}
+
+.sec-four {
+   width: 10%;
+}
+
+.sec-five {
+    width: 10%;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.sec-one,
+.sec-two,
+.sec-three,
+.sec-four,
+.sec-five {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 858px) {
+    .desktopnav  {
+      height: 60px;
+      zoom: 80%;
+    }
+  }
+  
+  @media screen and (max-width: 450px) {
+    .desktopnav  {
+        display: none;
+    }
+  }
