@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
-import 'Home.css';
+import './Home.css';
 import { AppContext } from '../../core/store/Context';
+import WeatherWidget from '../../core/components/organisms/weather-widget/WeatherWidget';
 
 const Home: React.FC = () => {
     const { theme } = useContext(AppContext);
@@ -9,7 +10,7 @@ const Home: React.FC = () => {
 
   return (
     <div className='home'>
-      
+      <WeatherWidget />
     </div>
   )
 }

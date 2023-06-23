@@ -3,10 +3,12 @@ import { Provider } from './core/store/Context';
 import fetchAllWeatherData from './utils/Fetch';
 import './App.css'
 import DesktopNav from './core/components/organisms/DesktopNav';
+import Home from './views/home/Home';
 
 
 const App: React.FC = () => {
   const [city, setCity] = useState<any>(['Yaounde']);
+  const [ searchQuery, setSearchQuery] = useState<string>('Yaounde');
   const [theme, setTheme] = useState<string>('dark');
 
   const appStyle = {
@@ -27,11 +29,13 @@ const App: React.FC = () => {
 
   return (
     <Provider value={{
-      theme, setTheme
+      theme, setTheme,
+      searchQuery, setSearchQuery
     }}>
       <section className="App" style={appStyle}>
        <div className="container" style={{backgroundColor: theme === 'dark'? '#101010' : '#dcdcdc' }}>
         <DesktopNav />
+        <Home />
        </div>
       </section>
     </Provider>
