@@ -1,0 +1,17 @@
+.bgcontainer3 {
+    width: 390px;
+    margin-top: 20px;
+    background-image: url('https://media.istockphoto.com/id/1464242690/vector/star-sky-with-crescent-starry-background-with-moon-seamless-pattern-of-yellow-stars-on-black.jpg?s=612x612&w=0&k=20&c=TaGSDGyMEpWoJ15HgVKAnLHGwODV76yQSnFzauG8veM=');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+
+.forecast {
+    width: 87%;
+    padding: 25px;
+    min-height: 200px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+}

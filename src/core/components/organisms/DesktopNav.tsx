@@ -9,6 +9,7 @@ import { useContext } from 'react';
 import SearchCity from '../atoms/SearchCity';
 import ToggleMode from '../molecules/ToggleMode';
 import ImageCircle from '../atoms/ImageCircle';
+import Clock from '../atoms/Clock';
 
 const DesktopNav = () => {
     const { theme } = useContext(AppContext);
@@ -39,7 +40,7 @@ const DesktopNav = () => {
     <ToggleMode />
     </div>
     <div className="sec-five">
-        18:16
+        <Clock />
     </div>
     <div className="sec-six">
     <IconCircle Icon={FaUser} />
