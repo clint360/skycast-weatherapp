@@ -14,11 +14,12 @@ export default function SearchBox({ className, handleClick, ...other }: any) {
   const [cities, setCities] = useState([])
   const [city, setCity] = useState("")
   const [toggle, setToggle] = useState(false)
-  const { setSearchQuery } = useContext(AppContext);
+  const { setSearchQuery, setBodyDisplay } = useContext(AppContext);
 
   useEffect(() => {
     if (debouncedValue === "") {
-      setShow(false)
+      setShow(false);
+      setBodyDisplay(true);
       return
     }
 
@@ -41,6 +42,7 @@ export default function SearchBox({ className, handleClick, ...other }: any) {
     setShow(false)
     setToggle(true)
     setSearchQuery(city.name)
+    setBodyDisplay(true)
   }
 
   return (
@@ -48,8 +50,10 @@ export default function SearchBox({ className, handleClick, ...other }: any) {
       {!toggle ? (
         <input
           placeholder="Search for city"
-          onInput={(e: any) => setValue(e.target.value)}
+          onInput={(e: any) => {setValue(e.target.value);}}
+          onChange={()=> { setBodyDisplay(false)}}
           value={value}
+          onFocus={() => setBodyDisplay(false)}
         />
       ) : (
         <div onClick={()=>setToggle(false)} className="p-3 w-full rounded-md bg-transparent border border-gray-400 focus:border-gray-200 outline-none shadow shadow-gray-300 text-gray-50 placeholder:text-gray-400">

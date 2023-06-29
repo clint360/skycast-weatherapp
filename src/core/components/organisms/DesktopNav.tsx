@@ -12,7 +12,7 @@ import ImageCircle from '../atoms/ImageCircle';
 import Clock from '../atoms/Clock';
 
 const DesktopNav = () => {
-    const { theme } = useContext(AppContext);
+    const { theme, searchQuery } = useContext(AppContext);
     return (
     <div className="bgcontainer">
     <div className='desktopnav' style={{background: theme  === 'dark' ? 'rgba(50, 50, 50, 0.15)' : 'rgba(256, 256, 256, 0.4)' }}>
@@ -22,12 +22,10 @@ const DesktopNav = () => {
     src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmMYbul3KRVEYGPjAa4unHv9I5ja3Um6FEKei9I1ZuASAQWNdG9BTRk7w-Htzqqj5_hdc&usqp=CAU' 
     alt='Logo' 
     />
-    <IconCircle Icon={AiFillAppstore} />
-    <IconCircle Icon={LiaMapSolid} />
     </div>
     <div className="sec-two">
     <div className="locationname">
-        Carlifornia, LA
+        {searchQuery}
     </div> 
     <div className="locationIcon">
     <FaLocationDot />
@@ -43,7 +41,6 @@ const DesktopNav = () => {
         <Clock />
     </div>
     <div className="sec-six">
-    <IconCircle Icon={FaUser} />
     </div>
     </div>
     </div>
