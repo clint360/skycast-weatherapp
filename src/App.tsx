@@ -4,7 +4,8 @@ import fetchAllWeatherData from './utils/Fetch';
 import './App.css'
 import DesktopNav from './core/components/organisms/DesktopNav';
 import Home from './views/home/Home';
-import Forecast from './core/components/organisms/forecast/Forecast';
+import Three from './core/components/organisms/three/Three';
+import SmallMapHolder from './core/components/organisms/maps/SmallMapHolder';
 
 
 const App: React.FC = () => {
@@ -34,11 +35,14 @@ const App: React.FC = () => {
       searchQuery, setSearchQuery
     }}>
       <section className="App" style={appStyle}>
-       <div className="container" style={{backgroundColor: theme === 'dark'? '#10101010' : '#dcdcdc05' }}>
+       <div className="container" style={{backgroundColor: theme === 'dark'? '#10101010' : '#dcdcdc053' }}>
         <DesktopNav />
+        <div className='flex'>
+          <div>
         <Home />
-        <Forecast />
-       </div>
+        </div>
+        </div>
+        </div>
       </section>
     </Provider>
   );
