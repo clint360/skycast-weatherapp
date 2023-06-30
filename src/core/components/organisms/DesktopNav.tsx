@@ -22,6 +22,7 @@ const DesktopNav = () => {
     src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmMYbul3KRVEYGPjAa4unHv9I5ja3Um6FEKei9I1ZuASAQWNdG9BTRk7w-Htzqqj5_hdc&usqp=CAU' 
     alt='Logo' 
     />
+    SkyCast
     </div>
     <div className="sec-two">
     <div className="locationname">
