@@ -1,5 +1,19 @@
 .prop-box {
-    width: 250px;
-    height: 300px;
-    background: black;
+    height: auto;
+    width: 280px !important;
+    
+}
+
+.details div{
+    width: 260px !important;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.wsdetails div{
+    width: 260px !important;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Provider } from './core/store/Context';
 import './App.css';
 import DesktopNav from './core/components/organisms/DesktopNav';
@@ -9,8 +9,9 @@ const App: React.FC = () => {
   const [theme, setTheme] = useState<string>('dark');
   const [ weatherInfo, setWeatherInfo ] = useState<any>({});
   const [ bodyDisplay, setBodyDisplay ] = useState<boolean>(true);
-  const [dailyData, setDailyData] = useState([])
-  const [hourlyData, setHourlyData] = useState([])
+  const [dailyData, setDailyData] = useState<any>([]);
+  const [hourlyData, setHourlyData] = useState<any>([]);
+  const [ timezone, setTimezone ] = useState<any>([]);
 
   const appStyle = {
     background: "url('https://cdn.wallpapersafari.com/83/42/hU6Jsz.jpg')",
@@ -46,7 +47,7 @@ const App: React.FC = () => {
   }
 fetchWeatherData(searchQuery);
 console.log(weatherInfo);
-},[searchQuery, weatherInfo]);
+},[searchQuery]);
 
 useEffect(()=>{
 const setData = () => {
@@ -64,7 +65,7 @@ const setData = () => {
       {
           if(i<7)
           {
-              setDailyData(dailyData => {
+              setDailyData((dailyData: any) => {
                   return [
                       ...dailyData,
                       {
@@ -93,9 +94,10 @@ const setData = () => {
       setHourlyData(hourlyDataSet)
      
     })
-}, [])
+}
 setData()
-},[weatherInfo])
+console.log(hourlyData, dailyData);
+},[searchQuery])
 
   return (
     <Provider value={{
@@ -103,7 +105,9 @@ setData()
       searchQuery, setSearchQuery,
       setBodyDisplay,
       weatherInfo,
-      hourlyData, setHourlyData
+      hourlyData, setHourlyData,
+      setTimezone,
+      dailyData, setDailyData 
     }}>
       <section className="App" style={appStyle}>
        <div className="container" style={{backgroundColor: theme === 'dark'? '#10101010' : '#dcdcdc0533' }}>

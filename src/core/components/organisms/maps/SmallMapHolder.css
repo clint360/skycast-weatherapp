@@ -16,3 +16,14 @@
     border-radius: 20px;
     backdrop-filter: blur(15px);
 }
+
+.themain {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    overflow-x: scroll;
+}
+
+.themain::-webkit-scrollbar {
+    display: none;
+}

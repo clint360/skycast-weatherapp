@@ -5,9 +5,8 @@ const styles = {
   dial: {
     display: "inline-block",
     width: `300px`,
-    height: `auto`,
-    color: "#000",
-    border: "0.5px solid #fff",
+    height: `200px`,
+    color: "#fff",
     padding: "2px"
   },
   title: {
@@ -29,6 +28,7 @@ const Dial = ({ id, value, title }) => {
         percent={percent}
         textColor={"#FFFFFF"}
         formatTextValue={(value) => value}
+        needleColor="inherit"
       />
       <div style={styles.title}>{title}</div>
     </div>

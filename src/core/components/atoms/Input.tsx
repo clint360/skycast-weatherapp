@@ -14,7 +14,7 @@ export default function SearchBox({ className, handleClick, ...other }: any) {
   const [cities, setCities] = useState([])
   const [city, setCity] = useState("")
   const [toggle, setToggle] = useState(false)
-  const { setSearchQuery, setBodyDisplay } = useContext(AppContext);
+  const { setSearchQuery, setBodyDisplay, setTimezone  } = useContext(AppContext);
 
   useEffect(() => {
     if (debouncedValue === "") {
@@ -42,6 +42,7 @@ export default function SearchBox({ className, handleClick, ...other }: any) {
     setShow(false)
     setToggle(true)
     setSearchQuery(city.name)
+    setTimezone(city.timezone) 
     setBodyDisplay(true)
   }
 

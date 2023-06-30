@@ -1,33 +1,33 @@
 import React from "react";
 import Thermometer from "react-thermometer-component";
+import './Temp.css';
 
 const styles = {
   dial: {
-    display: "inline-block",
     width: `300px`,
     height: `auto`,
-    color: "#000",
-    border: "0.5px solid #fff",
+    color: "inherit",
+    border: "none",
     padding: "2px"
   },
   title: {
     fontSize: "1em",
-    color: "#000",
+    color: "inherit",
     marginTop: "15px"
   }
 };
 
 const Temp = ({ id, value, title }) => {
   return (
-    <div style={styles.dial}>
+    <div className="tmpclass" style={styles.dial}>
       <Thermometer
-        theme="light"
+        theme="dark"
         value={value}
         max="100"
         steps="1"
         format="°C"
         size="normal"
-        height="180"
+        height="150"
       />
       <div style={styles.title}>
         {title}: {value}°C
