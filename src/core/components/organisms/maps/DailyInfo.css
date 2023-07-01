@@ -1,0 +1,31 @@
+.dailyInfo {
+    background: rgba(134, 134, 134, 0.1);
+    width: 170px;
+    height: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    border: 2px solid 'inherit';
+}
+
+.dailyInfo .date {
+    text-align: center;
+    padding: 5px;
+    color: orange;
+}
+
+.dailyInfo .icondiv {
+    height: 100px;
+    display: flex;
+}
+
+.dailyInfo .icondiv .degree {
+    font-size: 35px;
+}
+
+.dailyInfo .wcondition {
+    font-size: 25px;
+}
+
+.dailyInfo .lists {
+    padding-top: 30px;
+}

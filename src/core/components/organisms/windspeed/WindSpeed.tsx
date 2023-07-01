@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import Dial from '../../atoms/Dail'
 import { FiSunrise, FiSunset } from 'react-icons/fi'
 import { AppContext } from '../../../store/Context'
+import moment from "moment"
 
 function WindSpeed() {
   const { weatherInfo } = useContext(AppContext);
@@ -14,10 +15,10 @@ function WindSpeed() {
     <Dial id="dial1" value={weatherInfo?.windSpeed} title={`Wind Speed: ${weatherInfo?.windSpeed} `} /> 
     <div className="wsdetails">
     <div>
-        <span><FiSunrise /> Sunrise:</span><span>{dateFormat(weatherInfo?.sunrise)}</span>
+        <span><FiSunrise /> Sunrise:</span><span>{moment(weatherInfo?.sunrise).format("HH:mm")}</span>
       </div>
       <div>
-        <span><FiSunset />  Sunset: </span><span>{dateFormat(weatherInfo?.sunset)}</span>
+        <span><FiSunset />  Sunset: </span><span>{moment(weatherInfo?.sunset).format("HH:mm")}</span>
       </div>
     </div>
     </div>
